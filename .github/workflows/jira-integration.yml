@@ -1,27 +1,27 @@
 name: Jira Exporter Workflow
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 */1 * * *'  # Runs every hour
+ workflow_dispatch:
+ schedule:
+   - cron: '0 */1 * * *'  # Runs every hour
 
 jobs:
-  run-integration:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
+ run-integration:
+  runs-on: ubuntu-latest
+  timeout-minutes: 30
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Run Jira Integration
-        uses: port-labs/ocean-sail@v1
-        with:
-          type: jira
-          port_client_id: ${{ secrets.PORT_CLIENT_ID }}
-          port_client_secret: ${{ secrets.PORT_CLIENT_SECRET }}
-          port_base_url: "https://api.port.io"
-          config: |
-            jira_host: "https://ebukajohn11.atlassian.net/"
-            atlassian_user_email: ${{ secrets.atlassianUserEmail }}
-            atlassian_user_token: ${{ secrets.atlassianUserToken }}
+    - name: Run Jira Integration
+      uses: port-labs/ocean-sail@v1
+      with:
+       type: jira
+       port_client_id: ${{ secrets.PORT_CLIENT_ID }}
+       port_client_secret: ${{ secrets.PORT_CLIENT_SECRET }}
+       port_base_url: "https://api.port.io"
+       config: |
+        jira_host: "https://ebukajohn11.atlassian.net/"
+        atlassian_user_email: ${{ secrets.atlassianUserEmail }}
+        atlassian_user_token: ${{ secrets.atlassianUserToken }}
