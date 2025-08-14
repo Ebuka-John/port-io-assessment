@@ -1,6 +1,6 @@
 # Exercise 3 – Repository Scorecard for Open Pull Requests
 
-## 🎯 Objective
+##  Objective
 
 Create a scorecard on the `Repository` blueprint that evaluates the number of open pull requests (PRs) per repository using the following logic:
 
@@ -12,15 +12,15 @@ Create a scorecard on the `Repository` blueprint that evaluates the number of op
 
 ## 🛠️ Implementation Steps
 
-### 1. Create a Property: `open_pr_count`
+### 1. Create a Property: `open_pr_count_cal`
 
 - **Blueprint**: `Repository`
-- **Property Name**: `open_pr_count`
+- **Property Name**: `open_pr_count_cal`
 - **Type**: Number
 - **Source**: GitHub integration (Port GitHub App)
 - **Logic**: Automatically populated by the integration using GitHub’s API to count open PRs per repository.
 
-> ✅ Ensure your GitHub repositories have open PRs so the property reflects real data.
+>  Ensure your GitHub repositories have open PRs so the property reflects real data.
 
 ---
 
@@ -36,7 +36,7 @@ Create a scorecard on the `Repository` blueprint that evaluates the number of op
 
 ---
 
-## 📸 Validation
+## Validation
 
 - Verified scorecard behavior using three repositories:
     - `repo-a` with 3 open PRs → **Gold**
@@ -47,7 +47,7 @@ Create a scorecard on the `Repository` blueprint that evaluates the number of op
 
 ---
 
-## ✅ Outcome
+## Outcome
 
 The scorecard provides a clear visual indicator of repository health based on open PR volume, helping teams prioritize code review and merge activity.
 
