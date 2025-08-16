@@ -1,0 +1,9 @@
+  identifier: some_identifier
+  title: Some Title
+  team: []
+  icon: DefaultBlueprint
+  blueprint: environment
+  properties: {}
+  relations:
+    aws_account: related_entity_identifier
+    argo_cluster: related_entity_identifier
